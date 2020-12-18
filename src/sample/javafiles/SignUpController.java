@@ -15,48 +15,39 @@ import java.io.IOException;
 public class SignUpController {
 
     @FXML
-    private TextField login_field;
-
-    @FXML
-    private PasswordField password_field;
-
-    @FXML
-    private Button signUpButton;
-
-    @FXML
     private TextField signUpName;
 
     @FXML
     private TextField signUpLastname;
+    @FXML
+    private TextField login_field;
+
+    @FXML
+    private PasswordField password_field;
     @FXML
     private RadioButton checkBoxMale;
 
     @FXML
     private Button toAuthButton;
 
+    @FXML
+    private Button signUpButton;
+
+
 
 
     @FXML
     void initialize() {
         toAuthButton.setOnAction(actionEvent -> {
-            signUpButton.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/views/sample.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            openAuthPage();
         });
         signUpButton.setOnAction(actionEvent -> {
-            signUpNewUser();
+            if (!login_field.equals("")&& !password_field.equals("")){
+                signUpNewUser();
+                openAuthPage();
+            }else{
+                System.out.println("Login and password is empty");
+            }
         });
     }
 
@@ -76,5 +67,22 @@ public class SignUpController {
         User user = new User(firstName,lastName,userName,password,gender);
 
         dbHandler.signUpUser(user);
+    }
+    private void openAuthPage(){
+        signUpButton.getScene().getWindow().hide();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/sample/views/sample.fxml"));
+
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

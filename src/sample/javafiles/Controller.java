@@ -9,23 +9,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.animations.Shake;
-
-import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
     @FXML
     private TextField login_field;
 
