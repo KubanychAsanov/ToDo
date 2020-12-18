@@ -77,7 +77,8 @@ public class DatabaseHandler extends Configs {
     public static void addTask(Tasks task) {
         try {
             Statement statement = dbConnection.createStatement();
-            statement.executeUpdate("INSERT INTO tasks (task, taskDate) " + "VALUES ('" + task.getTask() +"','" + task.getTaskDate() + "')");
+            statement.executeUpdate("INSERT INTO "+ Const.TASK_TABLE + "(" + Const.TASK_NAME + "," +
+                    Const.TASK_DATE +") " + "VALUES ('" + task.getTask() +"','" + task.getTaskDate() + "')");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -85,7 +86,7 @@ public class DatabaseHandler extends Configs {
     public static void deleteTask(int id){
         try {
             Statement statement = dbConnection.createStatement();
-            statement.executeUpdate("DELETE FROM tasks where taskId=" + Integer.toString(id));
+            statement.executeUpdate("DELETE FROM " + Const.TASK_TABLE + " WHERE " + Const.TASK_ID + "=" + Integer.toString(id));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
