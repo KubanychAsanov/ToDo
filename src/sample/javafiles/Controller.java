@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,10 +35,16 @@ public class Controller {
             String loginText = login_field.getText().trim();
             String loginPassword = password_field.getText().trim();
 
-            if (!loginText.equals("")&& !loginPassword.equals(""))
+            if (!loginText.equals("") && !loginPassword.equals(""))
                 loginUser(loginText, loginPassword);
-            else
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Замечание");
+                alert.setHeaderText(null);
+                alert.setContentText("Логин и пароль пустые");
+                alert.showAndWait();
                 System.out.println("Login and password is empty");
+            }
         });
 
         LoginSignUpButton.setOnAction(actionEvent -> {

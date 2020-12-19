@@ -4,10 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -41,11 +38,19 @@ public class SignUpController {
         toAuthButton.setOnAction(actionEvent -> {
             openAuthPage();
         });
+
         signUpButton.setOnAction(actionEvent -> {
-            if (!login_field.equals("")&& !password_field.equals("")){
+            String loginText = login_field.getText().trim();
+            String loginPassword = password_field.getText().trim();
+            if (!loginText.equals("")&& !loginPassword.equals("")){
                 signUpNewUser();
                 openAuthPage();
             }else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Замечание");
+                alert.setHeaderText(null);
+                alert.setContentText("Логин и пароль пустые");
+                alert.showAndWait();
                 System.out.println("Login and password is empty");
             }
         });
