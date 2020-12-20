@@ -6,3 +6,12 @@
 
 ![image](https://user-images.githubusercontent.com/58214386/102723077-cf936780-432f-11eb-93c6-3a4c6e2601ec.png)
 
+# Place for foto of table
+
+* Content
+  * java
+  * html
+  * sql
+
+## The program is designed for desktop computers and has its own database for clients
+## We will add an update soon. Notice of Activities Clients Must Do
