@@ -6,7 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/58214386/102723077-cf936780-432f-11eb-93c6-3a4c6e2601ec.png)
 
-![Imgur](https://imgur.com/undefined.png)
+![Imgur](https://i.imgur.com/undefined.png)
 
 * Content
   * java
