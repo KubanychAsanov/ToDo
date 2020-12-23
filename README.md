@@ -13,4 +13,5 @@
   * sql
 
 ## The program is designed for desktop computers and has its own database for clients
-## We will add an update soon. Notice of Activities Clients Must Do
+#### Video on youtube 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=M1jtgSYxtQY)
