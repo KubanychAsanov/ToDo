@@ -12,6 +12,7 @@
   * java
   * sql
 
-## The program is designed for desktop computers and has its own database for clients
+### The program is designed for desktop computers and has its own database for clients
+
 #### Video on youtube 
 [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=M1jtgSYxtQY)
