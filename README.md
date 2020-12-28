@@ -1,3 +1,5 @@
+# Feedbacks https://docs.google.com/document/u/0/?authuser=0&usp=docs_web
+
 ## Teammates; Asanov Kubanych and Koshmatov Aibek
 # ToDo 
 ### This siple app created to planning your day
