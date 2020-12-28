@@ -1,4 +1,5 @@
-# Feedbacks https://docs.google.com/document/u/0/?authuser=0&usp=docs_web
+# Feedback ![Screenshot_2020-12-28-22-49-37-971_cn wps xiaomi abroad lite](https://user-images.githubusercontent.com/58214386/103230323-5adbb100-495f-11eb-96c9-7b08e11be248.jpg)
+
 
 ## Teammates; Asanov Kubanych and Koshmatov Aibek
 # ToDo 
